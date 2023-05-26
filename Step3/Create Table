@@ -1,0 +1,12 @@
+package githubDemoJDBC;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+public class CreateStatement {
+	public static void main(String[] args) throws SQLException {
+		Connection conn = Helper.getConnection();
+		Statement st= conn.createStatement();		
+		st.execute("create table student(sno int primary key,sname varchar(30),email varchar(30),phone long,DOB date,blood char(3),Gender char(1))");
+		System.out.println("table created successfully!");
+	}
+}
