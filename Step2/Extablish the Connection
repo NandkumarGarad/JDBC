@@ -1,0 +1,31 @@
+package githubDemoJDBC;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class ExtablishedConnection {
+	public static void main(String[] args) throws SQLException {
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306", "root", "Garad@520");
+		System.out.println("Extablish the Connection Succesfully!");
+	}
+}
+
+
+/*
+ steps 2 :  Extablished the Connection
+ 
+ 1.  in jdbc we can help of Connection interface to extablish the connection.
+ 2.  In jdbc to Extablish the Connection between java Application and Database 
+     we need a Connection Object but It is interface we cannot create object.
+     so we can take help of helper class called DriverManager.
+     
+     DriverManager are provide static method are called as getConnection("String url","String uname","String password");
+     getConnection method internally validate the passed url, uname, and password with the database.
+     
+     if Credentials (url, uname, password) is correct the getConnection return the object of Connection.
+     else it will return throws error SQLException.
+     
+ ***Note*** : Connection interface is also callec as Factory interface.
+               because it provide of another interface such as statement , preparedStatement.
+*/
