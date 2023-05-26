@@ -1,0 +1,15 @@
+package githubDemoJDBC;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class CreateStatement {
+	public static void main(String[] args) throws SQLException {
+		Connection conn = Helper.getConnection();
+		Statement st = conn.createStatement();
+		// 5. Delete Row From table 
+		st.execute("delete from student where sno=1");
+		System.out.println("row deleted successfully!");
+	}
+}
