@@ -1,0 +1,62 @@
+3. create Statement 
+ *      we create statement carry our requirements to the database .
+ *      In JDBC , create statement  is meant to create the object of statement interface .
+ *      Since, Statement is an interface , programmer cannot create object of its ....
+ *      Then we take help of  createStatement() method of Connection interface...
+ *      
+ *       Syntax : 
+ *        
+ *        Statement st = con.createStatement();
+ */
+
+
+/*
+ *  4.  Execute Statement :-
+ *      The process of carrying sql statement(Queries) to the database and executing those
+ *      statement is called as execute statement....
+ *      
+ *      To execute statements, Statements interface provides 3 method....
+ *      they are :-  
+ *      
+ *      a :-  execute()
+ *      b :-  executeUpdate()
+ *      c :-  executeQuery()
+ *      
+ *   a.  execute()  :- 
+ *           we use execute() method to send our  requirements to the database....
+ *           execute() method carry our requirements(sql statements) to the database 
+ *           and execute those statements.
+ *           
+ *         ==>the return type of execute() method is boolean...
+ *          
+ *         ==> we use execute() to perform insert, update , delete operations in database...
+ *         
+ *    Note :-> - we have to send our requirements to the database in the from of queries 
+ *               because our database understands only query language.
+ *              
+ *             - execute() method return true when we pass select query. 
+ *               in other cases, it returns false...
+ *     
+ 
+    ResultSet :- To FetchData
+    
+    1. ResultSet is an interface in jdbc
+    2. ResultSet is a container witch is used to store the result after the execution of query...
+    3. In ResultSet by default the cursor will be above in the data...
+    4. Methods in ResultSet :-
+                          Method Name                return type          Function
+                        1. next()                    boolean             move the cursor to next row from current position.
+                        2. getInt(int ci)            int                 fetch the int type data from the ResultSet.
+                        3. getString(int ci)         String              fetch the String type data from the ResultSet.
+                        4. getLong(int ci)           long                fetch the long type data from the ResultSet.
+                        5. getBoolean(int ci)        boolean             fetch the boolean type data from the ResultSet.
+                        6. getDouble(int ci)         double              fetch the double type data from the ResultSet.
+                        7. getString(String cn)      String              this method can retrun any type of data from of String
+                        8. getByte(int ci)           byte                 fetch the byte type data from the ResultSet.
+                        
+                        
+                        ci  ==> Column index
+                        cn  ==> column name
+                        
+      NOTE :-  next() method return true if the cursour is pointing to data, and it retruns false if the cursor is not pointing data.
+*/
