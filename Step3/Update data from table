@@ -1,0 +1,15 @@
+package githubDemoJDBC;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class CreateStatement {
+	public static void main(String[] args) throws SQLException {
+		Connection conn = Helper.getConnection();
+		Statement st = conn.createStatement();		
+		// 4. Update Data from Table
+		st.execute("update student set sno=18 where sname='Nandkumar Garad'");
+		System.out.println("table updated successfully!");
+	}
+}
