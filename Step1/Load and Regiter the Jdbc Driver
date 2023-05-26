@@ -1,0 +1,28 @@
+package githubDemoJDBC;
+
+public class LoadAndResgiterJDBCDriver {
+	public static void main(String[] args) throws ClassNotFoundException {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		System.out.println("Driver Loading Successfully!");
+	}
+}
+
+// com.mysql.cj.jdbc.Driver
+// Steps in JDBC
+/*
+1. Load and register the driver.
+2. Extablished Connection.
+3. Create Statement.
+4. Execute Statement.
+5. Process the Result.
+6. Close the Connection.
+*/
+
+/*
+step 1: The proccess of adding jdbc driver into java application is called load the driver.
+
+ 	    before java 1.4V we resgiter the driver with the help of Class.forName("url") Method.
+ 	    
+ 	    After java 1.4V the driver register the implicitly.F
+
+*/
