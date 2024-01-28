@@ -23,6 +23,6 @@ step 1: The proccess of adding jdbc driver into java application is called load 
 
  	    before java 1.4V we resgiter the driver with the help of Class.forName("url") Method.
  	    
- 	    After java 1.4V the driver register the implicitly.F
+ 	    After java 1.4V the driver register the implicitly.
 
 */
